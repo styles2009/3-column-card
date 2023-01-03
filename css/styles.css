@@ -5,19 +5,17 @@
 body {
   font-family: 'Big Shoulders Display', cursive;
   font-family: 'Lexend Deca', sans-serif;
-  font-size: 15px;
-  /* margin: 50px; */
-  
+  font-size: 1rem;
+  background-color: hsl(0, 0%, 95%);
 } 
 
-.attribution  {
+footer {
   text-align: center;
 } 
 
 .sedans {
   background-color: hsl(31, 77%, 52%);
   border-radius: 10px 10px 0px 0px;
-
 }
 
 .suvs {
@@ -27,197 +25,138 @@ body {
 .luxury {
   background-color: hsl(179, 100%, 13%);
   border-radius: 0px 0px 10px 10px;
-  
 }
 
 
 @media (min-width: 375px) {
-  .card_preview{
-    display: grid;
+  main {
+    /* display: grid;*/
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    justify-items: center;
-  
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
   } 
-  
+/* The Header*/
   .sedans, .suvs, .luxury {
-    width: 375px;
-    height: 450px;
-    color: hsl(0, 100%, 100%);
+    max-width: 37.5rem;
+    height: 480px;
+    color: rgb(255, 255, 255);
+    padding-top: 1rem;
+  }
+  .header{
+    padding-top: 1rem;
+    padding-left: 3.7rem;
+    text-transform: uppercase;
   }
 
+/* The description of each Vehicles*/
   .desc_sedan, .desc_suvs, .desc_lux {
-    padding-top: 15px;
-    padding-left: 60px;
-    padding-right: 40px;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 3.7rem;
+    padding-right: 2.7rem;
   }
 
   p.desc_sedan, p.desc_suvs, p.desc_lux {
     line-height: 1.7;
+    color: hsla(0, 0%, 100%, 0.75);
   }
   
-  .icon{
-    padding-top: 20px;
-    padding-left: 60px;
-    
+/*The icons*/
+  img{
+    padding-top: 2rem;
+    padding-left: 3.7rem;
   }
 
-  .header{
-    padding-top: 10px;
-    padding-left: 60px;
-    text-transform: uppercase;
-  }
-
-
-  #button, #button_0, #button_1{
-    border-radius: 40px;
-    padding-left: 880px;
+/* Clickable button with link */
+  #button, #button_1, #button_2 {
+    border-radius:40px;
     color: rgb(233, 128, 8);
     border: 2px solid #f0f0f0;
+    border-width:2px 30px;
     background-color: #f0f0f0;
-    padding: 20px; 
+    padding: 0.8rem; 
     text-align: center;
-    width: 200px;
-    height: 60px;  
-    margin-left: 60px;
-    margin-top: 30px;
+    width: 13rem; 
+    margin-left: 3.7rem;
   }
 
-  #button_0 {
-    color: hsl(184, 100%, 22%);
-  }
-  #button_1 {
-    color:hsl(179, 100%, 13%);
-  }
-  
+  #button_1{
+    color: hsl(184, 100%, 22%)
+   }
+   #button_2 {
+    color: hsl(179, 100%, 13%);
+   }
+   a:link {
+    text-decoration: none;
+   }
 }
 
 
 @media (min-width: 1440px) {
-  .card_preview {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
-    
-  } 
-
-  body {
-    margin: 50px;
+/* display: grid;*/
+  main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-right: 200px;
+    padding-left: 200px;
+    border-radius: 10px 0px 0px 0px;
   }
+/*The icons*/
+img{
+  padding-top: 0.9rem;
+  padding-left: 3.7rem;
+}
+  /* The Header*/
   .sedans, .suvs, .luxury {
-    width: 380px;
-    height: 520px;
-    color: hsl(0, 100%, 100%);
+    max-width: 144rem;
+    height: 550px;
+    color: rgb(255, 255, 255);
+    padding-top: 2rem;
   }
-
+  .sedans {
+    border-radius: 10px 0px 0px 10px;
+   }
+ 
  .luxury {
   margin-left: 0px;
   border-radius: 0px 10px 10px 0px;
  }
- .sedans {
-  border-radius: 10px 0px 0px 10px;
- }
- .card_preview {
-  padding-right: 200px;
-  padding-left: 200px;
-  border-radius: 10px 0px 0px 0px;
- }
 
+ /* The description of each Vehicles*/
+ .desc_sedan, .desc_suvs, .desc_lux {
+  padding-top: 0.5rem;
+  padding-left: 3.5rem;
+  padding-right: 4rem;
+  padding-bottom: 5.5rem;
+ }
  p.desc_sedan, p.desc_suvs, p.desc_lux {
   line-height: 1.7;
-  padding-bottom: 50px;
+  color: hsla(0, 0%, 100%, 0.75);
  }
 
 
- .card_preview
- .header {
-  padding-top: 20px;
-  padding-left: 60px;
-  text-transform: uppercase;
-  
+/* Clickable button with link */
+ #button, #button_1, #button_2 { 
+  border-radius: 40px;
+  color: hsl(31, 77%, 52%);
+  border-width:1px 30px #f0f0f0;
+  text-align: center;
+  width: 20px;
+  height: 60px;  
+  margin-left: 52px;
+  margin-top: 30px;
+ } 
+
+ #button_1{
+  color: hsl(184, 100%, 22%)
  }
 
-  #button, #button_0, #button_1 {
-    border-radius: 40px;
-    color: rgb(233, 128, 8);
-    border: 2px solid #f0f0f0;
-    background-color: #f0f0f0;
-    padding: 20px; 
-    text-align: center;
-    width: 200px;
-    height: 60px;  
-    margin-left: 60px;
-    margin-top: 30px;
-  }
-
-  #button_0 {
-    color: hsl(184, 100%, 22%);
-  }
-  #button_1 {
-    color:hsl(179, 100%, 13%);
-  }
-}
-
-@media (min-width: 1556px) {
-  .card_preview {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: 1fr;
-   justify-items: center;
-   
-} 
-
-.sedans, .suvs, .luxury {
- width: 380px;
- height: 550px;
- color: hsl(0, 100%, 100%);
-}
-
-.luxury {
- margin-left: 0px;
- border-radius: 0px 10px 10px 0px;
-}
-.sedans {
- border-radius: 10px 0px 0px 10px;
-}
-.card_preview {
- padding-right: 400px;
- padding-left: 400px;
- border-radius: 10px 0px 0px 0px;
-}
-
-p.desc_sedan, p.desc_suvs, p.desc_lux {
- line-height: 1.7;
- padding-bottom: 70px;
-}
-
-
-.card_preview
-.header {
- padding-top: 20px;
- padding-left: 60px;
- text-transform: uppercase;
+ #button_2 {
+  color:hsl(179, 100%, 13%);
+ }
  
 }
 
-#button, #button_0, #button_1 {
- border-radius: 40px;
- color: rgb(233, 128, 8);
- border: 2px solid #f0f0f0;
- background-color: #f0f0f0;
- padding: 20px; 
- text-align: center;
- width: 200px;
- height: 60px;  
- margin-left: 60px;
- margin-top: 30px;
-}
-
-#button_0 {
- color: hsl(184, 100%, 22%);
-}
-#button_1 {
- color:hsl(179, 100%, 13%);
-}
-}
